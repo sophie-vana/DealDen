@@ -1,38 +1,294 @@
-.App {
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Navigation Bar Logo */
+.denLogo {
+  max-height: 35px;
+  margin-right: 0.5em;
+  border-radius: 0.2em;
+}
+
+/* Name Form */
+.nameForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  margin-top: 2em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Name Input Field */
+.nameInput {
+  width: 300px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* NavBar */
+.navBar {
+  background-color: rgb(113, 71, 209);
+}
+
+/* Navigation Links */
+.navContain .brand,
+.navContain .navLink {
+  color: whitesmoke !important;
+  margin-right: 2em;
+}
+
+.navLink:hover,
+.navLink.active {
+  text-decoration: underline;
+  text-decoration-color: whitesmoke;
+}
+
+/* DealDen Homepage Heading */
+.homeHeading {
+  text-align: center;
+  padding-bottom: 0.5em;
+  color: white;
+  text-shadow: 0 0 10px #b300ff, 0 0 20px #29034a, 0 0 40px #bb00ff;
+}
+
+/* Slogan Style & Animation */
+.slogan {
+  text-align: center;
+  padding: 0.2em;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: wave 1s infinite linear alternate;
+}
+
+@keyframes wave {
+  from {
+    transform: rotate(-1deg);
+  }
+  to {
+    transform: rotate(1deg);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Login Prompt Text */
+.leadingText {
+  text-align: center;
+  color: rgb(56, 15, 103);
+  font-size: 1.25em;
+}
+
+/* Login Container */
+.homeLogin {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-image: url("../src/images/homeBackground.jpg");
+  background-size: cover;
+  height: 93.8vh;
+}
+
+/* Homepage Logo Style */
+.homeLogo {
+  width: 10%;
+  border-radius: 1em;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5em;
+}
+
+/* Successful Login Text */
+.successMsg {
+  color: whitesmoke;
+  margin-bottom: 1rem;
+}
+
+/* Anchor element link to Products Page */
+.productLink {
+  color: rgb(114, 17, 194);
+}
+
+.productsHeading {
+  padding: 1em;
+  text-align: center;
+}
+
+.productsIntro {
+  display: flex;
+  flex-direction: column;
+  justify-content:center ;
+  align-items: center;
+  padding-bottom: 2em;
+}
+
+.productsPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+.cartSection {
+ flex: 2;
+ max-width: fit-content;
+}
+
+.cartContain {
+  max-width: fit-content;
+}
+
+.productsSection {
+  flex: 8;
+  flex-direction: row;
+}
+
+.productsMain {
+  display: flex;
+  width: 100%;
+  padding: 4em;
+  padding-top: 0;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  gap: 3em;
+  box-sizing: border-box;
+  max-width: 100vw;
+  background-image: url("../src/images/homeBackground.jpg");
+  background-repeat: no-repeat;
+}
+
+.about h2 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1em;
+}
+
+.figureCaption p {
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+.figureContain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2em;
+  border-radius: 1em;
+
+}
+
+.fictional {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.fictional p {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.DealDenLogo {
+  border-radius: 1em;
+  margin-bottom: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+a {
+  color: #5b9cff;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+.contact {
+  background-image: url("../src/images/homeBackground.jpg");
+  height: 93.9vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.contactContain {
+  padding: 2em;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+
+@media (max-width: 480px) {
+  .productsMain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em;
   }
-  to {
-    transform: rotate(360deg);
+
+  .fictional {
+    flex-direction: column;
+    gap: 0.5em;
   }
+
+  .figureCaption p {
+    color: #ffffff;
+    font-size: 0.9em;
+  }
+
+ .homeLogin {
+  background-size: auto;
+ }
+
+ .figureContain {
+  width: 100%;
+ }
+
+ .about {
+  
+  padding: 0.5em;
+ }
+
 }
